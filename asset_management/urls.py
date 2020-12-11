@@ -20,4 +20,5 @@ import app.views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('welcome', app.views.welcome),
+    path('types', app.views.types),
 ]
