@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Types of Assets</title>
+  </head>
+  <body>
+    <h2>Types of Assets</h2>
+
+    <ul>
+      {%for type in types%}
+      <li>{{type | upper}}</li>
+      {% endfor %}
+    </ul>
+    <br />
+    Creator: {{creator}}
+  </body>
+</html>

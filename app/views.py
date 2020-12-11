@@ -14,6 +14,12 @@ def types(request):
     return render(request, 'types.html', {'now': current_time})
 
 
+def send_types(request):
+    types = ['Computers', 'Monitors', 'Desks', 'Servers', 'Peripherals']
+    creator = "Zach Murrell"
+    return render(request, 'list_types.html', {'types': types, 'creator': creator})
+
+
 def wish(request):
     if 'name' in request.GET:
         name = request.GET['name']
