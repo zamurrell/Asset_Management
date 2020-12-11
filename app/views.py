@@ -15,5 +15,8 @@ def types(request):
 
 
 def wish(request):
-    name = request.GET['name']
+    if 'name' in request.GET:
+        name = request.GET['name']
+    else:
+        name = "Guest"
     return HttpResponse(f'<h1>Hello {name}</h1>')
