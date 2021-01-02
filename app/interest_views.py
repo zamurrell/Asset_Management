@@ -9,3 +9,13 @@ def interest(request):
         return render(request, 'interest.html', {'interest': interest, 'amount': amount, 'rate': rate})
     else:
         return render(request, 'interest.html')
+
+
+def interest_post(request):
+    if request.method == 'POST':
+        amount = float(request.POST['amount'])
+        rate = float(request.POST['rate'])
+        interest = amount * rate / 100
+        return render(request, 'interest_post.html', {'interest': interest, 'amount': amount, 'rate': rate})
+    else:
+        return render(request, 'interest_post.html')

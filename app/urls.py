@@ -8,4 +8,5 @@ urlpatterns = [
     path('list_types', views.send_types),
     path('wish', views.wish),
     path('interest', interest_views.interest),
+    path('interest_post', interest_views.interest_post),
 ]
