@@ -18,6 +18,7 @@ def send_types(request):
     types = ['Computers', 'Monitors', 'Desks', 'Servers', 'Peripherals']
     creator = "Zach Murrell"
     return render(request, 'list_types.html', {'types': types, 'creator': creator})
+    # return render(request, 'list_types.html', {'types': types})
 
 
 def wish(request):
