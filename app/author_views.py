@@ -32,7 +32,6 @@ def add_author(request):
             cur.execute("insert into authors(fullname,email,mobile) values(?,?,?)",
                         (fullname, email, mobile))
             con.commit()
-            con.close()
             return render(request, 'db/add_author.html',
                           {'message': f'Added {fullname} Successfully!'})
         except Exception as ex:
@@ -44,6 +43,8 @@ def add_author(request):
                            'mobile': mobile
                            }
                           )
+        finally:
+            con.close()
 
 
 def add_author_form(request):

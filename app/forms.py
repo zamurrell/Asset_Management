@@ -7,6 +7,6 @@ class InterestForm(forms.Form):
 
 
 class AuthorForm(forms.Form):
-    fullname = forms.CharField(label="Fullname")
+    fullname = forms.CharField(label="Full Name")
     email = forms.EmailField(label="Email")
     mobile = forms.RegexField(label="Mobile", regex=r"\d+")
